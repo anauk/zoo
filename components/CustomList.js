@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CustomList = props => {
+const CustomList = props => (
     <Container>
         <Avatar soutce={props.image}/>
         <Title>{props.title}</Title>
         <Name>{props.name}</Name>
     </Container>
-}
+)
+
 const Avatar = styled.Image`
 width: 44px;
 height: 44px;
@@ -33,5 +34,7 @@ const Container = styled.View`
 width: 100%;
 padding-left: 80px;
 margin-top: 20px;
+margin-bottom: 20px;
+
 `;
 export default CustomList;
