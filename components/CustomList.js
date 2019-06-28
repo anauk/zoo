@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import * as Icon from '@expo/vector-icons';
 
 const CustomList = props => (
     <Container>
         <Avatar soutce={props.image}/>
         <Title>{props.title}</Title>
         <Name>{props.name}</Name>
+        <Icon.Ionicons
+            name="ios-arrow-forward"
+        size={32}
+        color="#b8bece"
+        style={{position:"absolute", right: 20, top: 5}}/>
     </Container>
-)
+);
 
 const Avatar = styled.Image`
 width: 44px;
@@ -35,6 +41,5 @@ width: 100%;
 padding-left: 80px;
 margin-top: 20px;
 margin-bottom: 20px;
-
 `;
 export default CustomList;
