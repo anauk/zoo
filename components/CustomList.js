@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { TouchableOpacity } from 'react-native';
 import * as Icon from '@expo/vector-icons';
 
 const CustomList = props => (
-    <Container>
+    <TouchableOpacity onPress={props.onItemPressed}>
+    <Container >
         <Avatar soutce={props.image}/>
         <Title>{props.title}</Title>
         <Name>{props.name}</Name>
@@ -13,6 +15,7 @@ const CustomList = props => (
         color="#b8bece"
         style={{position:"absolute", right: 20, top: 5}}/>
     </Container>
+    </TouchableOpacity>
 );
 
 const Avatar = styled.Image`

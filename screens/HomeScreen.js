@@ -1,22 +1,41 @@
 import React from 'react';
-
+import { ScrollView, SafeAreaView} from 'react-native';
 import styled from 'styled-components';
-import CustomList from './components/CustomList';
+import ItemDetails from '../components/ItemDetails'
+
+import CustomList from '../components/CustomList';
+import Menu from "../components/Menu";
 class HomeScreen extends React.Component{
 
+    itemSelectedItem = key => {
+        this.setState(prevState=>{
+            return {
+                selectedItem: prevState.customLogo.find(place=>{
+                    return place.key === key;
+                })
+            }
+        })
+    }
     render() {
         return (
             <Container>
-                {customLogo.map((customLogo, index)=>(
-                    <CustomList key={index}
-                                image={customLogo.image}
-                                title={customLogo.title}
-                                name={customLogo.name}
-                    />
+                {/* <Menu/>*/}
+                {/*<SafeAreaView>
+                <ScrollView>*/}
+               {/* <ItemDetails selectedItem = {customLogo}/>*/}
 
-                ))}
+                    {customLogo.map((customLogo, index)=>(
+                        <CustomList key={index}
+                                    image={customLogo.image}
+                                    title={customLogo.title}
+                                    name={customLogo.name}
+                                    onItemPressed={this.itemSelectedItem}
+                        />
 
+                    ))}
 
+                   {/* </ScrollView>
+                </SafeAreaView>*/}
             </Container>
         );
     }
@@ -28,23 +47,33 @@ background-color: #f0f3f5;
 margin-top: 80px;
 
 `;
-
+const Content = styled.View``;
 const customLogo = [
     {
-        image: require("../assets/minions_PNG17.png"),
+        image: require("../assets/backlit-blur-couple-556667.jpg"),
         title: "My first app!",
-        name: "Nmjuj"
+        name: "Nmjuj",
+        selectedItem: null
     },
     {
-        image: require("../assets/minions_PNG17.png"),
+        image: require("../assets/backlit-blur-couple-556667.jpg"),
         title: "My first app!",
-        name: "Nmjuj"
+        name: "Nmjuj",
+        selectedItem: null
     },
     {
-        image: require("../assets/minions_PNG17.png"),
+        image: require("../assets/backlit-blur-couple-556667.jpg"),
         title: "My first app!",
-        name: "Nmjuj"
-    }
+        name: "Nmjuj",
+        selectedItem: null
+    },
+    {
+        image: require("../assets/backlit-blur-couple-556667.jpg"),
+        title: "My first app!",
+        name: "Nmjuj",
+        selectedItem: null
+    },
+
 ]
 
 export default HomeScreen;
