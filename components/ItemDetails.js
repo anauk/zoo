@@ -18,7 +18,8 @@ const ItemDetails = props => {
     <ContainerDetail>
         {modalContent}
         <PartButton>
-            <MainButton title="Add">Add</MainButton>
+            <DeleteButton title="Delete"/>
+            <CloseButton title="Close"/>
         </PartButton>
     </ContainerDetail>
 </Modal>
@@ -41,5 +42,6 @@ const Name = styled.Text`
 color: #3c4560;
 font-weight: 500;`;
 const PartButton = styled.View``;
-const MainButton = styled.Button``;
+const DeleteButton = styled.Button``;
+const CloseButton = styled.Button``;
 

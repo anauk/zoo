@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
 import * as Icon from '@expo/vector-icons';
 
-const CustomList = props => (
+const CustomItem = props => (
     <TouchableOpacity onPress={props.onItemPressed}>
     <Container >
-        <Avatar soutce={props.image}/>
+        <Avatar source={props.image}/>
         <Title>{props.title}</Title>
         <Name>{props.name}</Name>
         <Icon.Ionicons
@@ -45,4 +45,4 @@ padding-left: 80px;
 margin-top: 20px;
 margin-bottom: 20px;
 `;
-export default CustomList;
+export default CustomItem;
