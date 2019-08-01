@@ -54,7 +54,7 @@ class CustomLogo extends React.Component {
     }
 }
 
-export default CustomLogo;
+export { CustomLogo };
 
 const styles = StyleSheet.create({
     listContainer: {

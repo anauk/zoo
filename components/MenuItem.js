@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import * as Icon from '@expo/vector-icons';
 
-const MenuItem = props => (
+const MenuItem = ({ icon, title, text}) => (
     <Container>
         <IconView>
-            <Icon.Ionicons name={props.icon} size={24} colore="#5446bfb"/>
+            <Icon.Ionicons name={icon} size={24} colore="#5446bfb"/>
         </IconView>
         <Content>
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
+            <Title>{title}</Title>
+            <Text>{text}</Text>
         </Content>
     </Container>
 );

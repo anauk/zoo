@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { TouchableOpacity } from 'react-native';
 import * as Icon from '@expo/vector-icons';
 
-const CustomItem = props => (
-    <TouchableOpacity onPress={props.onItemPressed}>
+const CustomItem = ({ image, title, name, onItemPressed }) => (
+    <TouchableOpacity onPress={onItemPressed}>
     <Container >
-        <Avatar source={props.image}/>
-        <Title>{props.title}</Title>
-        <Name>{props.name}</Name>
+        <Avatar source={image}/>
+        <Title>{title}</Title>
+        <Name>{name}</Name>
         <Icon.Ionicons
             name="ios-arrow-forward"
         size={32}
@@ -45,4 +45,4 @@ padding-left: 80px;
 margin-top: 20px;
 margin-bottom: 20px;
 `;
-export default CustomItem;
+export { CustomItem };

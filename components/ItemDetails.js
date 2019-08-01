@@ -25,7 +25,7 @@ const ItemDetails = props => {
 </Modal>
 )
 };
-export default ItemDetails;
+export { ItemDetails };
 
 const ContainerDetail = styled.View`
 margin-top: 20px`;
